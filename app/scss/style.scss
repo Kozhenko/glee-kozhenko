@@ -276,31 +276,39 @@
     transition: color .3s ease;
     outline-color: #FFFFFF;
   }
-  &__btn:hover {
+  &__btn:hover,
+  .mixitup-control-active {
     color: $filter-color-active;
   }
 /***********style ul - product__items************/
 &__items {
-  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px 30px;
 }
 /*******style li - product__model**********/
   &__model {
     text-align: center;
     width: 265px;
     height: 380px;
-    background-color: yellow;
+    background-color: $button-color;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     position: relative;
+    border-radius: 8px;
   }
   &__model-box {
     overflow: hidden;
     position: relative;
+    height: 235px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   &__img {
-    margin: 0 42px 35px;
-    padding-top: 30px;
+     padding-top: 30px;
     width: 186px;
-    object-fit: cover;
+    max-height: 205px;
+    object-fit: contain;
   }
   &__choice {
     position: absolute;
@@ -320,8 +328,15 @@
     height: 45px;
     border-radius: 50%; 
     display: block;
+    transition: all .4s ease;
     svg {
       margin-top: 13px;
+    }
+  }
+  &__link:hover {
+    background-color: $price-color;
+    path {
+      fill: $button-color;
     }
   }
   &__name {
@@ -345,15 +360,9 @@
 }
 
 
+/************footer***********/
+.footer {
 
-
-
-
-
-
-
-
-
-
+}
 
 @import 'media'

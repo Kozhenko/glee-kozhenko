@@ -3,4 +3,6 @@ $ (function () {
     dots: true,
     arrows: false,
   });
+
+  mixitup('.product__items');
 });
