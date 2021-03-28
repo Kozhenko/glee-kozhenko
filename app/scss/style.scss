@@ -89,7 +89,7 @@
     right: 7px;
   }
   &__view::before {
-    background-color: #a3bbc8;
+    background-color: $price-color;
     top: -17px;
     right: 9px;
   }
@@ -98,7 +98,7 @@
     z-index: 99;
   }
 }
-/**********************************************************************/
+/*********************************************************/
 .slider {
   &__list {
     width: 100%;
@@ -146,7 +146,7 @@
   }
   &__btn {
     padding: 22px 100px 22px 25px;
-    background-color: #a3bbc8;
+    background-color: $price-color;
     @extend %rubik-500;
     font-size: 15px;
     text-transform: capitalize;
@@ -249,7 +249,102 @@
     left: 109px;
   }
 }
-/*******************************************************/
+/**********product btn***********************/
+.product {
+  padding: 75px 0 185px;
+  &__title {
+    @extend %dmsans-700;
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__btn {
+    margin-bottom: 85px;
+    margin-right: 30px;
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: $filter-color;
+    text-transform: capitalize;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    transition: color .3s ease;
+    outline-color: #FFFFFF;
+  }
+  &__btn:hover {
+    color: $filter-color-active;
+  }
+/***********style ul - product__items************/
+&__items {
+  
+}
+/*******style li - product__model**********/
+  &__model {
+    text-align: center;
+    width: 265px;
+    height: 380px;
+    background-color: yellow;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    position: relative;
+  }
+  &__model-box {
+    overflow: hidden;
+    position: relative;
+  }
+  &__img {
+    margin: 0 42px 35px;
+    padding-top: 30px;
+    width: 186px;
+    object-fit: cover;
+  }
+  &__choice {
+    position: absolute;
+    bottom: 40px;
+    right: 25px;
+    transition: all .4s ease;
+    transform: translateY(1300%);
+    display: flex;
+    justify-content: center;
+  }
+  &__link:not(:last-child) {
+    margin-right: 40px;
+  }
+  &__link {
+    background-color: $button-color;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; 
+    display: block;
+    svg {
+      margin-top: 13px;
+    }
+  }
+  &__name {
+    @extend %dmsans-500;
+    font-size: 16px;
+    line-height: 2.5;
+    color: $title-color;
+  }
+  &__price {
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 2.5;
+    color: $price-color;
+    margin-bottom: 40px;
+  }
+  &__model:hover {
+    .product__choice {
+      transform: translateY(0);
+    }
+  }
+}
+
+
 
 
 
