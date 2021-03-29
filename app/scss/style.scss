@@ -460,7 +460,6 @@
     padding: 15px;
     background-color: $price-color;
     color: $button-color;
-    transition: background-color color border .3s ease;
     max-width: 100px;
     height: 45px;
     @extend %dmsans-400;
@@ -468,11 +467,7 @@
     line-height: 1.5;
     border: none;
     text-transform: capitalize;
-  }
-  &__button:hover {
-    color: $price-color;
-    background-color: $button-color;
-    border: 1px solid $price-color;
+    cursor: pointer;
   }
   /**********************************/
   &__wraper {
@@ -493,7 +488,12 @@
   &__menu-item:not(:last-child){
     margin-right: 15px;
   }
-  &__menu-item:not(:first-child){
+  &__menu-item:not(:last-child)::after {
+    content: '|';
+    @extend %rubik-400;
+    color: $footer-color;
+    font-size: 14px;
+    line-height: 2.3;
     margin-left: 15px;
   }
 }
