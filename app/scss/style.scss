@@ -362,7 +362,69 @@
     }
   }
 }
+/*************stock****************/
+.stock {
 
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 30px;
+  }
+  &__item {
+    width: 870px;
+    height: 390px;
+    background-color: #feefe2;
+    display: flex;
+    color: $title-color;
+  }
+  &__img-mirum {
+    margin: -114px 18px 85px 137px;
+  }
+  &__content-mirum {
+    padding: 103px 0 98px;
+  }
+  &__img-malesuada {
+    margin: -94px 62px 85px 148px;
+  }
+  &__content-malesuada {
+    padding: 90px 0 85px;
+  }
+  &__name {
+    @extend %dmsans-700;
+    font-size: 26px;
+    list-style: 1.2;
+    max-width: 250px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+  }
+  &__name-mirum {
+    margin-bottom: 33px;
+  }
+  &__text {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 1.9;
+    min-width: 330px;
+    margin-bottom: 60px;
+  }
+  &__link {
+    @extend %rubik-500;
+    font-size: 15px;
+    color: $text-color;
+    text-transform: capitalize;
+    padding: 23px 86px 23px 19px;
+    border: 1px solid #b3b7b5;
+    border-radius: 5px;
+  }
+  &__link::after {
+    content: '';
+    background-image: url(../images/top_price/top_price-shape.png);
+    position: absolute;
+    width: 22px;
+    height: 9px;
+    margin: 5px 0 0 44px;
+  }
+}
 
 /************footer***********/
 .footer {
