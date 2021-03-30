@@ -116,8 +116,9 @@
   &__img {
     max-height: 235px;
     position: relative;
+    z-index: 2;
   }
-  &__img::after {
+  &__images::after {
     content: '';
     position: absolute;
     background-image: url(../images/slider/gradient.png);
@@ -126,6 +127,9 @@
     background-position: center;
     height: 634px;
     width: 645px;
+    z-index: 1;
+    top: 100px;
+    // margin-left: 50px;
   }
   &__title {
     text-transform: uppercase;
@@ -369,7 +373,7 @@
   }
   &__inner {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 77px;
   }
   /**********first colum**************/
@@ -406,9 +410,8 @@
     line-height: 2.3;
   }
   /************2-3 colum*****************/
-  ul.footer__list {
-    // margin-right: 200px;
-    padding: 0 5px;
+  &__list {
+    max-width: 200px;
   }
   &__subtitle {
     @extend %dmsans-700;
@@ -426,7 +429,6 @@
   }
   &__link {
     text-transform: capitalize;
-    width: 200px;
     line-height: 2.3;
   }
   &__item:not(:last-child) {
