@@ -33,6 +33,7 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/mixitup/dist/mixitup.min.js',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'app/js/slick.min.js',
     'app/js/main.js'
   ])
@@ -43,7 +44,7 @@ function scripts() {
 }
 
 function images() {
-  return src('app/images/**/*.*')
+  return src('app/images/**/**/*.*')
   .pipe(imagemin([
     imagemin.gifsicle({ interlaced: true }),
     imagemin.mozjpeg({ quality: 75, progressive: true }),

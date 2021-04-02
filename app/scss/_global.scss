@@ -1,15 +1,17 @@
 body {
-
+  // font-size: ;
+  // line-height: ;
+  // color: ;
+  // background-color: ;
+  font-weight: normal;
 }
 
 .container {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
-}
 
-.container-top {
-  max-width: 1770px;
-  padding: 0 15px;
-  margin: 0 auto;
+  &--top {
+    max-width: 1770px;
+  }
 }
