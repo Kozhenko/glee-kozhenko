@@ -31,7 +31,7 @@
       color: $filter-color-active;
     }
   }
-
+/*************************************/
   &__products {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -43,6 +43,14 @@
     border-radius: 4px;
     padding-left: 37px;
     background-color: #f8f8f8;
+    position: relative;
+    overflow: hidden;
+    transition: all .4s ease;
+    &:hover {
+      .new-design__choice {
+        transform: translateY(0);
+      }
+    }
   }
 
   &__subtitle {
@@ -57,6 +65,7 @@
 
   &__content {
     display: flex;
+    justify-content: space-around;
   }
 
   p {
@@ -71,5 +80,49 @@
     max-width: 270px;
     min-height: 105px;
     margin-top: -38px;
+  }
+}
+/***************************/
+.new-design__choice {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  transition: background-color path .4s ease;
+  margin-top: 15px;
+  transform: translateY(1300%);
+  &--link,
+  &--btn {
+    background-color: $button-color;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; 
+    text-align: center;
+    vertical-align: middle;
+    display: block;
+    transition: background-color path .4s ease;
+    box-shadow: 9px 8px 17px 3px rgba(5, 5, 5, 0.05);
+    margin-right: 15px;
+    svg {
+      margin-top: 13px;
+    }
+    &:hover {
+      background-color: $price-color;
+      path {
+        fill: $button-color;
+      }
+    }
+  }
+
+  &--btn {
+    outline-width: 0;
+    border: none;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+    svg {
+      margin-top: 0;
+      display: inline;
+      vertical-align: middle;
+    }
   }
 }

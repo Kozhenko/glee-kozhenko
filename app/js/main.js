@@ -5,4 +5,5 @@ $ (function () {
   });
 
   mixitup('.product__items');
+  mixitup('.new-design__products');
 });
