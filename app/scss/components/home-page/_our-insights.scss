@@ -8,7 +8,6 @@
 
   &__link {
     @extend %dmsans-700;
-    font-size: 16px;
     color: #262626;
     text-transform: capitalize;
     transition: color path .3 ease;
@@ -29,6 +28,7 @@
   &__item {
     max-width: 370px;
     position: relative;
+    background-color: $button-color;
     z-index: 5;
     &:not(:last-child) {
       margin-right: 30px;
@@ -41,7 +41,6 @@
   &__content {
     display: flex;
     flex-direction: column;
-    background-color: $button-color;
   }
 
   &__text,

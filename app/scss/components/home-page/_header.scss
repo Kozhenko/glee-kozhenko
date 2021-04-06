@@ -66,11 +66,10 @@
     right: 13px;
     font-size: 10px;
     color: $title-color;
-    line-height: 16px;
+    line-height: 1.6;
     text-align: center;
     z-index: 99;
     @extend %dmsans-400;
-    font-size: 10px;
   }
 
   &__search::before,
