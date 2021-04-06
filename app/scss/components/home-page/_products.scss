@@ -1,9 +1,31 @@
+.filter {
+    &__btn {
+    margin-bottom: 85px;
+    margin-right: 30px;
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: $filter-color;
+    text-transform: capitalize;
+    background-color: transparent;
+    padding: 0;
+    border: transparent;
+    cursor: pointer;
+    transition: color .3s ease;
+    outline-color: #FFFFFF;
+    &:hover {
+      color: $filter-color-active;
+    }
+  }
+
+  .mixitup-control-active {
+    color: $filter-color-active;
+  }
+}
+
 .product {
   padding-top: 75px;
 
   &__title {
-    @extend %dmsans-700;
-    font-size: 36px;
     margin-bottom: 40px;
     text-align: center;
   }
@@ -13,25 +35,7 @@
     justify-content: center;
   }
 
-  &__btn {
-    margin-bottom: 85px;
-    margin-right: 30px;
-    @extend %dmsans-700;
-    font-size: 16px;
-    color: $filter-color;
-    text-transform: capitalize;
-    background-color: transparent;
-    padding: 0;
-    border: none;
-    cursor: pointer;
-    transition: color .3s ease;
-    outline-color: #FFFFFF;
-  }
 
-  &__btn:hover,
-  .mixitup-control-active {
-    color: $filter-color-active;
-  }
 /***********style ul - product__items************/
   &__items {
     display: grid;
@@ -63,42 +67,16 @@
     max-height: 205px;
     object-fit: contain;
   }
-  &__choice {
-    position: absolute;
-    bottom: 40px;
-    transition: all .4s ease;
-    transform: translateY(1300%);
-    display: flex;
-    justify-content: center;
-  }
- 
-  &__link {
-    background-color: $button-color;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%; 
-    display: block;
-    transition: background-color .4s ease;
-    box-shadow: 9px 8px 17px 3px rgba(5, 5, 5, 0.05);
-    svg {
-      margin-top: 13px;
-    }
-    &:not(:last-child) {
-      margin-right: 15px;
-    }
-    &:hover {
-      background-color: $price-color;
-      path {
-        fill: $button-color;
-      }
-    }
-  }
  
   &__name {
     @extend %dmsans-500;
     font-size: 16px;
     line-height: 2.5;
     color: $title-color;
+    transition: color .3 ease;
+    &:hover {
+      color: $price-color;
+    }
   }
 
   &__price {
@@ -112,6 +90,51 @@
   &__model:hover {
     .product__choice {
       transform: translateY(0);
+    }
+  }
+}
+/***********************************/
+.choice {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  transition: background-color path .4s ease;
+  margin-top: 15px;
+  transform: translateY(1300%);
+  &__link,
+  &__btn {
+    background-color: $button-color;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; 
+    text-align: center;
+    vertical-align: middle;
+    display: block;
+    cursor: pointer;
+    transition: background-color path .4s ease;
+    box-shadow: 9px 8px 17px 3px rgba(5, 5, 5, 0.05);
+    margin-right: 15px;
+    svg {
+      margin-top: 13px;
+    }
+    &:hover {
+      background-color: $price-color;
+      path {
+        fill: $button-color;
+      }
+    }
+  }
+
+  &__btn {
+    outline-width: 0;
+    border: none;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+    svg {
+      margin-top: 0;
+      display: inline;
+      vertical-align: middle;
     }
   }
 }
@@ -173,16 +196,19 @@
     font-size: 15px;
     color: $text-color;
     text-transform: capitalize;
-    padding: 23px 86px 23px 19px;
+    padding: 23px 20px 23px 19px;
     border: 1px solid #b3b7b5;
     border-radius: 5px;
-    &::after {
-      content: '';
-      background-image: url('../images/top_price/top_price-shape.png');
-      position: absolute;
-      width: 22px;
-      height: 9px;
-      margin: 5px 0 0 44px;
+    transition: background-color color path .3 ease;
+    svg {
+      margin-left: 45px;
+    }
+    &:hover {
+      background-color: $text-color;
+      color: #feefe2;
+      path {
+        fill: #feefe2;
+      }
     }
   }
 }

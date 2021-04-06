@@ -2,14 +2,14 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 @import 'components/home-page/header';
+@import 'components/home-page/slider';
 @import 'components/home-page/products';
 @import 'components/home-page/new-design';
-
-
-
+@import 'components/home-page/our-insights';
 
 @import 'components/home-page/footer';
 

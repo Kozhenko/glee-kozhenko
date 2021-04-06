@@ -5,6 +5,7 @@ $filter-color: #8b8b8b;
 $filter-color-active: #191919;
 $price-color: #a3bbc8;
 $footer-color: #7b7b7b;
+$partner-color: #fef7f0;
 
 %dmsans-700{
   font-family: 'DMSans', sans-serif;
@@ -29,4 +30,12 @@ $footer-color: #7b7b7b;
 %rubik-400{
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{a}x(#{$numbers});
 }

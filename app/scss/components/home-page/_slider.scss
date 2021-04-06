@@ -1,0 +1,176 @@
+.slider {
+  &__list {
+    width: 100%;
+    max-height: 820px;
+    background-color: #fcd7b6;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding: 200px 0 200px 300px;
+  }
+
+  &__content {
+    margin-right: 125px;
+  }
+
+  &__img {
+    max-height: 235px;
+    position: relative;
+    z-index: 2;
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url('../images/slider/gradient.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      min-height: 634px;
+      width: 645px;
+      z-index: 1;
+      top: 100px;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    @extend %rubik-500;
+    font-size: 72px;
+    width: 420px;
+    color: $title-color;
+    margin-bottom: 45px;
+  }
+
+  p {
+    width: 370px;
+    margin-bottom: 30px;
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 1.7;
+    color: $text-color;
+    margin-bottom: 67px;
+  }
+
+  &__btn {
+    padding: 22px 20px 22px 25px;
+    background-color: $price-color;
+    @extend %rubik-500;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: $button-color;
+    transition: color background-color path .3 ease;
+    svg {
+      margin-left: 60px;
+    }
+    &:hover {
+      color: $price-color;
+      background-color: $button-color;
+      path {
+        fill: $price-color;
+      }
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    li:not(:last-child) {
+      margin-right: 20px;
+    }
+  
+    button {
+      background-color: #fde3cc;
+      width: 29px;
+      height: 29px;
+      border-radius: 50%;
+      border: none;
+      outline-width: 0;
+      cursor: pointer;
+      transition: background-color .3s ease;
+      margin-bottom: 45px;
+    }
+  
+    button:hover {
+      background-color: #ffffff;
+    }
+  }
+  
+  .slick-active button {
+    background-color: #ffffff;
+  }
+}
+
+/*************/
+.info {
+  display: flex;
+  justify-content: center;
+  background-color: #fef7f0;
+
+  &__item {
+    padding: 48px 0 48px 150px;
+    position: relative;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 18px;
+    line-height: 2.2;
+  }
+
+  p {
+    @extend %dmsans-400;
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  &__item::before {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 75px;
+    top: 55px;
+  }
+
+  &__item--support::before {
+    background-image: url('../images/slider/support.png');
+    width: 49px;
+    height: 49px;
+  }
+
+  &__item--delivery::before {
+    background-image: url('../images/slider/delivery.png');
+    width: 49px;
+    height: 50px;
+  }
+
+  &__item--payment::before {
+    background-image: url('../images/slider/payment.png');
+    width: 50px;
+    height: 45px;
+  }
+
+  &__inner::before {
+    content: '';
+    background-image: url('../images/slider/radial.png');
+    position: absolute;
+    width: 20px;
+    height: 20px;
+  }
+
+  &__inner--support::before {
+   top: 86px;
+   left: 107px;
+  }
+
+  &__inner--delivery::before {
+    top: 71px;
+    left: 109px;
+  }
+
+  &__inner--payment::before {
+    top: 87px;
+    left: 109px;
+  }
+}

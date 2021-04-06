@@ -1,0 +1,133 @@
+.our-insights {
+  margin-bottom: -220px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+  }
+
+  &__link {
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: #262626;
+    text-transform: capitalize;
+    transition: color path .3 ease;
+    svg {
+      margin-left: 20px;
+    }
+    &:hover {
+      color: $price-color;
+      path {
+        fill: $price-color;
+      }
+    }
+  }
+}
+
+.articles {
+  display: flex;
+  &__item {
+    max-width: 370px;
+    position: relative;
+    z-index: 5;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__img {
+    min-height: 250px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    background-color: $button-color;
+  }
+
+  &__text,
+  &__info {
+    margin-left: 28px;
+  }
+
+  &__link {
+    // margin-top: -56px;
+    transform: translateY(-60%);
+    padding: 10px 30px;
+    background-color: $price-color;
+    border-radius: 11px;
+    @extend %dmsans-700;
+    font-size: 14px;
+    line-height: 1.4;
+    color: $button-color;
+    text-transform: uppercase;
+    position: absolute;
+    transition: color background-color .3 ease;
+    &:hover {
+      background-color: $title-color;
+      color: $price-color;
+    }
+  }
+
+  p {
+    @extend %dmsans-500;
+    font-size: 18px;
+    color: #262626;
+    padding-bottom: 40px;
+    min-height: 100px;
+    width: 290px;
+    margin-top: 36px;
+  }
+
+  &__info {
+    padding: 22px 0 28px 0;
+    border-top: 1px solid #e0e0e0;
+    max-width: 315px;
+    flex-grow: 1;
+  }
+
+  &__data,
+  &__autor {
+    @extend %rubik-400;
+    font-size: 12px;
+    line-height: 2.5;
+    text-transform: uppercase;
+    color: #222933;
+    transition: color .3 ease;
+    position: relative;
+    &:hover {
+      color: $filter-color;
+    }
+    &::before {
+      content: '';
+      background-image: url('..images/our-insights/pip.png');
+      // background-repeat: no-repeat;
+      // background-position: center;
+      // position: absolute;
+      width: 6px;
+      height: 9px;
+    }
+  }
+
+  &__data {
+    margin-right: 44px;
+  }
+}
+
+.partner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $partner-color;
+  padding: 265px 0 90px;
+  position: relative;
+  // top: -220px;
+  transform: translateY(-50%);
+
+  z-index: 0;
+  &__img {
+    &:not(:last-child) {
+      margin-right: 100px;
+    }
+  }
+}
+
