@@ -1,0 +1,15 @@
+@import 'vars';
+@import 'fonts';
+@import 'mixin';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+@import '../components/_header/_header';
+
+@import '../components/_slider/_slider';
+@import '../components/_products/_products';
+@import '../components/_new-design/_new-design';
+@import '../components/_insights/_insights';
+
+@import '../components/_footer/_footer';

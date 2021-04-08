@@ -1,0 +1,206 @@
+.header {
+  padding: 50px 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-height: 40px;
+}
+
+.nav-menu {
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link {
+    color: $text-color;
+    text-transform: capitalize;
+    font-size: 15px;
+    line-height: 1;
+    @extend %rubik-500;
+    transition: color .3s ease;
+    &:hover {
+      color: $footer-color;
+    }
+  }
+}
+
+.burger-btn {
+  display: none;
+
+  
+  @include _1100 {
+    display: block;
+    cursor: pointer;
+    width: 35px;
+    border: none;
+    border-top: 2px solid $filter-color;
+    border-bottom: 2px solid $filter-color;
+    background-color: transparent;
+    position: relative;
+    height: 24px;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 35px;
+      height: 2px;
+      background-color: $filter-color;
+      left: 0;
+      top: 9px;
+    }
+  }
+
+
+}
+
+.user-nav {
+  display: flex;
+
+  svg {
+    height: 17px;
+    max-width: 18px;
+    fill: $title-color;
+    transition: fill .3s ease; 
+  }
+
+  &__btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    transition: background-color .3s ease;
+
+  }
+
+  &__view {
+    background-color: $price-color;
+    svg {
+      fill: $button-color;
+    }
+
+    &:hover {
+      background-color: $filter-color;
+      svg {
+        fill: $bc-color;
+      }
+    }
+  }
+  
+  &__search {
+    background-color: #edf1f4;
+    margin-right: 20px;
+
+    &:hover {
+      background-color: $filter-color;
+      svg {
+        fill: $bc-color;
+      }
+    }
+  }
+
+  
+/***************************/
+  &__grup {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  &__link{
+    background-color: $bc-color;
+    position: relative;
+    &:hover {
+      background-color: $filter-color;
+      svg {
+        fill: $button-color;
+      }
+    }
+  }
+
+  &__love {
+    padding: 15px 30px 0px 40px;
+    border-radius: 24px 0 0 24px;
+
+    &::after {
+      content: '';
+      width: 1px;
+      height: 33px;
+      background-color: $decor-color;
+      position: absolute;
+      right: 0;
+      top: 9px;
+    }
+  }
+
+  &__basket {
+    padding: 15px 40px 0px 30px;
+    border-radius: 0 24px 24px 0;
+  }
+
+  &__num {
+    @extend %dmsans-400;
+    font-size: 10px;
+    line-height: 2.7;
+    color: #243f4d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    border-radius: 8px;
+    background-color: $button-color;
+    position: relative;
+    top: -28px;
+    right: -14px;
+  }
+
+  @include _1100 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 90px;
+    background-color: $bc-color;
+    display: block;
+    text-align: center;
+    transform: translateY(-200%);
+    transition: transform .5s ease;
+    z-index: 5;
+    &__active {
+      transform: translateY(0);
+    }
+    &__link{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      position: relative;
+      transition: background-color .3s ease;
+      background-color: $price-color;
+      svg {
+        fill: $button-color;
+      }
+
+      &:hover {
+        background-color: $filter-color;
+        svg {
+          fill: $bc-color;
+        }
+      }
+
+      &__grup {
+        flex-direction: column;
+      }
+
+      &::after {
+        content: '';
+        display: none;
+      }
+    }
+  }
+}
+

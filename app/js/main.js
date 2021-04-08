@@ -18,5 +18,9 @@ $ (function () {
         control: '.new-design__btn'
       }
     });
+
+  $('.burger-btn, .user-nav').on('click', function () {
+    $('.user-nav').toggleClass('.user-nav__active');
+  });
   
 });

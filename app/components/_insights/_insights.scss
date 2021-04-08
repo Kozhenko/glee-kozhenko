@@ -10,10 +10,16 @@
     @extend %dmsans-700;
     color: #262626;
     text-transform: capitalize;
-    transition: color path .3 ease;
+    transition: color .3 ease;
+
     svg {
       margin-left: 20px;
     }
+
+    path {
+      transition: fill .3 ease;
+    }
+
     &:hover {
       color: $price-color;
       path {

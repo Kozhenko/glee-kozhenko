@@ -1,19 +1,17 @@
-@import 'slick';
 @import 'vars';
 @import 'fonts';
+@import 'mixin';
 @import 'reset';
 @import 'libs';
 @import 'global';
 
-@import 'components/home-page/header';
-@import 'components/home-page/slider';
-@import 'components/home-page/products';
-@import 'components/home-page/new-design';
-@import 'components/home-page/our-insights';
-@import 'components/home-page/footer';
+@import '../components/_header/header';
+@import '../components/_slider/slider';
+@import '../components/_products/products';
+@import '../components/_new-design/new-design';
+@import '../components/_insights/insights';
+@import '../components/_footer/footer';
 
 
 
 
-
-@import 'mixin'
