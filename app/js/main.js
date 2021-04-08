@@ -1,4 +1,10 @@
 $ (function () {
+
+  $('.burger-btn, .nav-menu a').on('click', function () {
+    $('.nav-menu').toggleClass('nav-menu__active');
+    $('.body').toggleClass('body__active');
+  });
+
   $('.slider__list').slick({
     dots: true,
     arrows: false,
@@ -18,9 +24,4 @@ $ (function () {
         control: '.new-design__btn'
       }
     });
-
-  $('.burger-btn, .user-nav').on('click', function () {
-    $('.user-nav').toggleClass('.user-nav__active');
-  });
-  
 });

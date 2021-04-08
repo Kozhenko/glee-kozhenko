@@ -10,7 +10,15 @@ body {
   font-weight: normal;
   display: flex;
   flex-direction: column;
+  
+  @include _1100 {
+    &__active {
+      overflow: hidden;
+    }
+  }
 }
+
+
 
 .main {
   flex-grow: 1;

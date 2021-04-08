@@ -15,7 +15,7 @@ function browsersync() {
     server: {
       baseDir: 'app/'
     },
-    notofy: false
+    notify: false
   })
 }
 
@@ -85,7 +85,7 @@ function cleanDist() {
 }
 
 function watching() {
-  watch(['app/scss/**/*.scss'], styles);//авто-слежение за всеми scss
+  watch(['app/**/*.scss'], styles);//авто-слежение за всеми scss
   watch(['app/*.njk'], nunjucks);//авто-слежение за всеми njk
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts); //авто-слежение за всеми js кроме main.min.js
   watch(['app/**/*.html']).on('change', browserSync.reload);
