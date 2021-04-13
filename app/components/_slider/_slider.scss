@@ -1,14 +1,17 @@
 .slider {
-  &__list {
+  &__wrapper {
     width: 100%;
     max-height: 820px;
-    background-color: #fcd7b6;
+    background-color: $bc-color;
+    position: relative;
+    z-index: 1;
   }
 
   &__inner {
     display: flex;
     align-items: center;
-    padding: 200px 0 200px 300px;
+    padding: 200px 0;
+    // padding: 200px 0 200px 300px;
   }
 
   &__content {
@@ -17,33 +20,39 @@
 
   &__img {
     max-height: 235px;
+    max-width: 650px;
     position: relative;
-    z-index: 2;
-    &::after {
-      content: '';
-      position: absolute;
-      background-image: url('../images/slider/gradient.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      min-height: 634px;
-      width: 645px;
-      z-index: 1;
-      top: 100px;
-    }
+    object-fit: contain;
+    z-index: 99;
+    top: 0;
   }
+
+  // &__images::after {
+  //   content: '';
+  //   position: absolute;
+  //   background-image: url('../images/slider/gradient.png');
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   background-position: center;
+  //   height: 634px;
+  //   width: 645px;
+  //   z-index: 1;
+  //   top: 80px;
+  //   // right: 185px;
+  //   right: -18px;
+  // }
 
   &__title {
     text-transform: uppercase;
     @extend %rubik-500;
     font-size: 72px;
-    width: 420px;
+    max-width: 430px;
     color: $title-color;
     margin-bottom: 45px;
   }
 
   p {
-    width: 370px;
+    max-width: 370px;
     margin-bottom: 30px;
     @extend %rubik-400;
     font-size: 18px;
@@ -52,6 +61,14 @@
     margin-bottom: 67px;
   }
 
+  &__title,
+  p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
+  }
+  
   &__btn {
     padding: 22px 20px 22px 25px;
     background-color: $price-color;
@@ -59,57 +76,113 @@
     font-size: 15px;
     text-transform: capitalize;
     color: $button-color;
-    transition: color background-color path .3 ease;
-    svg {
-      margin-left: 60px;
-    }
+    transition: color background-color .3s ease;
+    outline: 0;
     &:hover {
       color: $price-color;
       background-color: $button-color;
-      path {
+      svg {
         fill: $price-color;
       }
     }
+
+    svg {
+      margin-left: 60px;
+      max-width: 22px;
+      height: 9px;
+      fill: $button-color;
+      transition: fill .3s ease; 
+    }
   }
 
-  .slick-dots {
-    display: flex;
-    justify-content: center;
-    li:not(:last-child) {
-      margin-right: 20px;
-    }
-  
-    button {
-      background-color: #fde3cc;
-      width: 29px;
-      height: 29px;
-      border-radius: 50%;
-      border: none;
-      outline-width: 0;
-      cursor: pointer;
-      transition: background-color .3s ease;
-      margin-bottom: 45px;
-    }
-  
-    button:hover {
-      background-color: #ffffff;
+  @include _1200 {
+    &__img {
+      max-width: 470px;
     }
   }
-  
-  .slick-active button {
+
+  @include _1100 {
+    &__inner {
+      flex-direction: column;
+      padding: 50px 0 100px
+    }
+
+    &__title,
+    p {
+      margin-bottom: 35px;
+      max-width: 100%;
+    }
+
+    &__content {
+      margin: 0 0 50px;
+    }
+  }
+
+  @include _650 {
+    &__images {
+      display: none;
+    }
+
+    &__title {
+      font-size: 60px;
+    }
+
+    &__content {
+      margin: 0;
+    }
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  li:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  button {
+    background-color: #fde3cc;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    border: none;
+    outline-width: 0;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    margin-bottom: 45px;
+    @extend %rubik-500;
+    font-size: 11px;
+  }
+
+  button:hover {
     background-color: #ffffff;
   }
+}
+
+.slick-active button {
+  background-color: #ffffff;
 }
 
 /*************/
 .info {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+  min-height: 170px;
   background-color: #fef7f0;
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
 
   &__item {
-    padding: 48px 0 48px 150px;
+    padding: 20px 130px 0;
     position: relative;
+  }
+
+  &__item--delivery {
+    border-left: 1px solid $line-color;
+    border-right: 1px solid $line-color;
+    margin-right: 50px;
   }
 
   &__title {
@@ -122,6 +195,7 @@
     @extend %dmsans-400;
     font-size: 16px;
     line-height: 1.9;
+    max-width: 220px;
   }
 
   &__item::before {
@@ -129,48 +203,48 @@
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
-    left: 75px;
-    top: 55px;
+    top: 35px;
+    left: 65px;
+    width: 50px;
+    height: 50px;
   }
-
+  
   &__item--support::before {
     background-image: url('../images/slider/support.png');
-    width: 49px;
-    height: 49px;
   }
 
   &__item--delivery::before {
     background-image: url('../images/slider/delivery.png');
-    width: 49px;
-    height: 50px;
   }
 
   &__item--payment::before {
     background-image: url('../images/slider/payment.png');
-    width: 50px;
-    height: 45px;
   }
 
-  &__inner::before {
-    content: '';
-    background-image: url('../images/slider/radial.png');
-    position: absolute;
-    width: 20px;
-    height: 20px;
+  @include _1100 {
+    &__info {
+      justify-content: space-around;
+    }
+
+    &__item--delivery {
+      border: none;
+    }
+
+    &__item {
+      padding: 20px 30px 0 70px;
+      margin-right: 30px;
+    }
+
+    &__item::before {
+      left: 5px;
+    }
   }
 
-  &__inner--support::before {
-   top: 86px;
-   left: 107px;
+  @include _650 {
+    &__item {
+      padding-right: 10px;
+      margin: 0;
+    }
   }
 
-  &__inner--delivery::before {
-    top: 71px;
-    left: 109px;
-  }
-
-  &__inner--payment::before {
-    top: 87px;
-    left: 109px;
-  }
 }

@@ -4,12 +4,15 @@
 @mixin _650 {
   @media (max-width: 650px) { @content; }
 }
-// @mixin for-tablet-landscape-up {
-//   @media (max-width: 720px) { @content; }
-// }
 @mixin _900 {
   @media (max-width: 900px) { @content; }
 }
 @mixin _1100 {
   @media (max-width: 1100px) { @content; }
+}
+@mixin _1200 {
+  @media (max-width: 1200px) { @content; }
+}
+@mixin _1550 {
+  @media (max-width: 1550px) { @content; }
 }
