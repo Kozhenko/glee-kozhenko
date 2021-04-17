@@ -28,4 +28,27 @@ $ (function () {
         control: '.new-design__btn'
       }
     });
+
+  $('.partner__list').slick({
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 343,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+  });
+
 });

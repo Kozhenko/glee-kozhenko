@@ -1,4 +1,4 @@
-.our-insights {
+.insights {
   margin-bottom: -220px;
   &__top {
     display: flex;
@@ -8,34 +8,47 @@
 
   &__link {
     @extend %dmsans-700;
-    color: #262626;
+    color: $insights-color;
     text-transform: capitalize;
-    transition: color .3 ease;
-
-    svg {
-      margin-left: 20px;
-    }
-
-    path {
-      transition: fill .3 ease;
-    }
-
+    transition: color 0.3s ease;
     &:hover {
       color: $price-color;
-      path {
+      svg {
         fill: $price-color;
       }
+    }
+  }
+
+  &__icon {
+    margin-left: 20px;
+    width: 7px;
+    height: 12px;
+    fill: #2f2f2f;
+    transition: fill 0.3s ease;
+  }
+
+  @include _650 {
+    &__top {
+      display: block;
+    }
+
+    &__link {
+      position: absolute;
+      right: 0;
+      padding-right: 5px;
     }
   }
 }
 
 .articles {
   display: flex;
+
   &__item {
     max-width: 370px;
     position: relative;
     background-color: $button-color;
     z-index: 5;
+
     &:not(:last-child) {
       margin-right: 30px;
     }
@@ -47,16 +60,11 @@
   &__content {
     display: flex;
     flex-direction: column;
-  }
-
-  &__text,
-  &__info {
-    margin-left: 28px;
+    padding-left: 28px;
   }
 
   &__link {
-    // margin-top: -56px;
-    transform: translateY(-60%);
+    transform: translateY(-50%);
     padding: 10px 30px;
     background-color: $price-color;
     border-radius: 11px;
@@ -66,73 +74,136 @@
     color: $button-color;
     text-transform: uppercase;
     position: absolute;
-    transition: color background-color .3 ease;
+    transition-property: color, background-color;
+    transition: all 0.3s ease;
+
     &:hover {
       background-color: $title-color;
       color: $price-color;
     }
   }
 
-  p {
+  &__name {
     @extend %dmsans-500;
     font-size: 18px;
-    color: #262626;
-    padding-bottom: 40px;
+    color: $insights-color;
+    margin: 36px 0 40px;
     min-height: 100px;
     width: 290px;
-    margin-top: 36px;
+    transition: color 0.3s ease;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
+
+    &:hover {
+      color: $filter-color;
+    }
   }
 
   &__info {
-    padding: 22px 0 28px 0;
+    padding: 22px 5px 28px 0;
     border-top: 1px solid #e0e0e0;
     max-width: 315px;
-    flex-grow: 1;
   }
 
-  &__data,
-  &__autor {
+  &__about {
     @extend %rubik-400;
     font-size: 12px;
     line-height: 2.5;
     text-transform: uppercase;
     color: #222933;
-    transition: color .3 ease;
+    transition: color 0.3s ease;
     position: relative;
     &:hover {
       color: $filter-color;
+      svg {
+        fill: $filter-color;
+      }
     }
-    &::before {
-      content: '';
-      background-image: url('..images/our-insights/pip.png');
-      // background-repeat: no-repeat;
-      // background-position: center;
-      // position: absolute;
-      width: 6px;
-      height: 9px;
-    }
+  }
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+    fill: #222933;
+    transition: fill 0.3s ease;
+    margin-right: 5px;
   }
 
   &__data {
     margin-right: 44px;
   }
-}
 
-.partner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $partner-color;
-  padding: 265px 0 90px;
-  position: relative;
-  // top: -220px;
-  transform: translateY(-50%);
+  @include _1100 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px 30px;
 
-  z-index: 0;
-  &__img {
-    &:not(:last-child) {
-      margin-right: 100px;
+    &__item {
+      box-shadow: 9px 8px 17px 3px rgba(5, 5, 5, 0.05);
+      max-width: 100%;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+
+    &__img {
+      width: 100%;
+    }
+  }
+
+  @include _768 {
+    grid-template-columns: repeat(1, 1fr);
+
+    &__name {
+      width: 100%;
+    }
+
+    &__info {
+      max-width: 100%;
+      margin-right: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @include _343 {
+    &__name { 
+      margin-bottom: 10px;
+    }
+
+    &__info {
+      flex-direction: column;
+    }
+
+    &____autor{
+      margin-top: 10px;
     }
   }
 }
 
+.partner {
+  background-color: $partner-color;
+  padding: 340px 0 90px;
+  transform: translateY(-36px);
+  position: relative;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 100px;
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+  }
+}

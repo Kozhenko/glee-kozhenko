@@ -1,8 +1,11 @@
-// @mixin for-phone-only {
-//   @media (max-width: 400px) { @content; }
-// }
+@mixin _343 {
+  @media (max-width: 343px) { @content; }
+}
 @mixin _650 {
   @media (max-width: 650px) { @content; }
+}
+@mixin _768 {
+  @media (max-width: 768px) { @content; }
 }
 @mixin _900 {
   @media (max-width: 900px) { @content; }

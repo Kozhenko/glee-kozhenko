@@ -2,258 +2,314 @@
   <div class="container">
     <h2 class="product__title title">Products of the week</h2>
 
-    <ul class="product__list filter">
-      <li class="product__item">
+    <ul class="filter">
+      <li class="filter__item">
         <button class="product__button filter__btn" data-filter="all">all</button>
       </li>
-      <li class="product__item">
+      <li class="filter__item">
         <button class="product__button filter__btn" data-filter=".furnitures">furnitures</button>
       </li>
-      <li class="product__item">
+      <li class="filter__item">
         <button class="product__button filter__btn" data-filter=".chairs">chairs</button>
       </li>
-      <li class="product__item">
+      <li class="filter__item">
         <button class="product__button filter__btn" data-filter=".lighting">lighting</button>
       </li>
-      <li class="product__item">
+      <li class="filter__item">
         <button class="product__button filter__btn" data-filter=".decor">decor</button>
       </li>
     </ul>
 
     <ul class="product__items">
       <li class="product__model mix furnitures">
-        <div class="product__model-box">
-          <a class="product__links" href="#">
-            <img class="product__img" src="images/products/product1.png" alt="Wooden radio">
-          </a>
-          <div class="product__choice choice">
-            <a class="product__link choice__link" href="#">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#look"></use>
-              </svg>
+        <article class="product-card">
+          <div class="product-card__photo">
+            <a class="product-card__links" href="#">
+              <img class="product-card__img" src="images/products/product1.png" alt="Wooden radio">
             </a>
-            <button class="product__btn choice__btn" type="button">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#garbage"></use>
-              </svg>
-            </button>
-            <button class="product__btn choice__btn" type="button">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#love"></use>
-              </svg>
-            </button>
+            <div class="choice">
+              <a class="choice__link" href="#">
+                <span class="sr-only">go to product page</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#look"></use>
+                </svg>
+              </a>
+
+              <button class="choice__btn" type="button">
+                <span class="sr-only">add to purchase</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#garbage"></use>
+                </svg>
+              </button>
+
+              <button class="choice__btn" type="button">
+                <span class="sr-only">add to spoiled</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#love"></use>
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-        <a class="product__page" href="#">
-          <h3 class="product__name">Wooden radio</h3>
-        </a>
-        <div class="product__price">$29.00</div>
+          <a class="product-card__page" href="#">
+            <h3 class="product-card__name">Wooden radio</h3>
+          </a>
+          <div class="product-card__price">$29.00</div>
+        </article>
       </li>
 
       <li class="product__model mix lighting">
-        <div class="product__model-box">
-          <a class="product__links" href="#">
-            <img class="product__img" src="images/products/product2.png" alt="Wooden chair">
-          </a>
-          <div class="product__choice choice">
-            <a class="product__link choice__link" href="#">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#look"></use>
-              </svg>
+        <article class="product-card">
+          <div class="product-card__photo">
+            <a class="product-card__links" href="#">
+              <img class="product-card__img" src="images/products/product2.png" alt="Wooden chair">
             </a>
-            <button class="product__btn choice__btn" type="button">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#garbage"></use>
-              </svg>
-            </button>
-            <button class="product__btn choice__btn" type="button">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#love"></use>
-              </svg>
-            </button>
+            <div class="choice">
+              <a class="choice__link" href="#">
+                <span class="sr-only">go to product page</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#look"></use>
+                </svg>
+              </a>
+
+              <button class="choice__btn" type="button">
+                <span class="sr-only">add to purchase</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#garbage"></use>
+                </svg>
+              </button>
+
+              <button class="choice__btn" type="button">
+                <span class="sr-only">add to spoiled</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#love"></use>
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-        <a class="product__page" href="#">
-          <h3 class="product__name">Wooden radio</h3>
-        </a>
-        <div class="product__price">$29.00</div>
+          <a class="product-card__page" href="#">
+            <h3 class="product-card__name">Wooden radio</h3>
+          </a>
+          <div class="product-card__price">$29.00</div>
+        </article>
       </li>
 
       <li class="product__model mix decor furnitures">
-        <div class="product__model-box">
-          <a class="product__links" href="#">
-            <img class="product__img" src="images/products/product3.png" alt="Wooden chair">
-          </a>
-          <div class="product__choice choice">
-            <a class="product__link choice__link" href="#">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#look"></use>
-              </svg>
+        <article class="product-card">
+          <div class="product-card__photo">
+            <a class="product-card__links" href="#">
+              <img class="product-card__img" src="images/products/product3.png" alt="Wooden chair">
             </a>
-            <button class="product__btn choice__btn" type="button">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#garbage"></use>
-              </svg>
-            </button>
-            <button class="product__btn choice__btn" type="button">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#love"></use>
-              </svg>
-            </button>
+            <div class="choice">
+              <a class="choice__link" href="#">
+                <span class="sr-only">go to product page</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#look"></use>
+                </svg>
+              </a>
+
+              <button class="choice__btn" type="button">
+                <span class="sr-only">add to purchase</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#garbage"></use>
+                </svg>
+              </button>
+
+              <button class="choice__btn" type="button">
+                <span class="sr-only">add to spoiled</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#love"></use>
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-        <a class="product__page" href="#">
-          <h3 class="product__name">Wooden chair</h3>
-        </a>
-        <div class="product__price">$29.00</div>
+          <a class="product-card__page" href="#">
+            <h3 class="product-card__name">Wooden chair</h3>
+          </a>
+          <div class="product-card__price">$29.00</div>
+        </article>
       </li>
 
       <li class="product__model mix furnitures decor">
-        <div class="product__model-box">
-          <a class="product__links" href="#">
-            <img class="product__img" src="images/products/product4.png" alt="Retro table">
-          </a>
-          <div class="product__choice choice">
-            <a class="product__link choice__link" href="#">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#look"></use>
-              </svg>
+        <article class="product-card">
+          <div class="product-card__photo">
+            <a class="product-card__links" href="#">
+              <img class="product-card__img" src="images/products/product4.png" alt="Retro table">
             </a>
-            <button class="product__btn choice__btn" type="button">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#garbage"></use>
-              </svg>
-            </button>
-            <button class="product__btn choice__btn" type="button">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#love"></use>
-              </svg>
-            </button>
+            <div class="choice">
+              <a class="choice__link" href="#">
+                <span class="sr-only">go to product page</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#look"></use>
+                </svg>
+              </a>
+
+              <button class="choice__btn" type="button">
+                <span class="sr-only">add to purchase</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#garbage"></use>
+                </svg>
+              </button>
+
+              <button class="choice__btn" type="button">
+                <span class="sr-only">add to spoiled</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#love"></use>
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-        <a class="product__page" href="#">
-          <h3 class="product__name">Retro table</h3>
-        </a>
-        <div class="product__price">$29.00</div>
+          <a class="product-card__page" href="#">
+            <h3 class="product-card__name">Retro table</h3>
+          </a>
+          <div class="product-card__price">$29.00</div>
+        </article>
       </li>
 
       <li class="product__model mix decor">
-        <div class="product__model-box">
-          <a class="product__links" href="#">
-            <img class="product__img" src="images/products/product5.png" alt="Wooden radio">
-          </a>
-          <div class="product__choice choice">
-            <a class="product__link choice__link" href="#">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#look"></use>
-              </svg>
+        <article class="product-card">
+          <div class="product-card__photo">
+            <a class="product-card__links" href="#">
+              <img class="product-card__img" src="images/products/product5.png" alt="Wooden radio">
             </a>
-            <button class="product__btn choice__btn" type="button">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#garbage"></use>
-              </svg>
-            </button>
-            <button class="product__btn choice__btn" type="button">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#love"></use>
-              </svg>
-            </button>
+            <div class="choice">
+              <a class="choice__link" href="#">
+                <span class="sr-only">go to product page</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#look"></use>
+                </svg>
+              </a>
+
+              <button class="choice__btn" type="button">
+                <span class="sr-only">add to purchase</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#garbage"></use>
+                </svg>
+              </button>
+
+              <button class="choice__btn" type="button">
+                <span class="sr-only">add to spoiled</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#love"></use>
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-        <a class="product__page" href="#">
-          <h3 class="product__name">Wooden radio</h3>
-        </a>
-        <div class="product__price">$29.00</div>
+          <a class="product-card__page" href="#">
+            <h3 class="product-card__name">Wooden radio</h3>
+          </a>
+          <div class="product-card__price">$29.00</div>
+        </article>
       </li>
 
       <li class="product__model mix furnitures">
-        <div class="product__model-box">
-          <a class="product__links" href="#">
-            <img class="product__img" src="images/products/product6.png" alt="Wooden chair">
-          </a>
-          <div class="product__choice choice">
-            <a class="product__link choice__link" href="#">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#look"></use>
-              </svg>
+        <article class="product-card">
+          <div class="product-card__photo">
+            <a class="product-card__links" href="#">
+              <img class="product-card__img" src="images/products/product6.png" alt="Wooden chair">
             </a>
-            <button class="product__btn choice__btn" type="button">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#garbage"></use>
-              </svg>
-            </button>
-            <button class="product__btn choice__btn" type="button">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#love"></use>
-              </svg>
-            </button>
+            <div class="choice">
+              <a class="choice__link" href="#">
+                <span class="sr-only">go to product page</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#look"></use>
+                </svg>
+              </a>
+
+              <button class="choice__btn" type="button">
+                <span class="sr-only">add to purchase</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#garbage"></use>
+                </svg>
+              </button>
+
+              <button class="choice__btn" type="button">
+                <span class="sr-only">add to spoiled</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#love"></use>
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-        <a class="product__page" href="#">
-          <h3 class="product__name">Wooden chair</h3>
-        </a>
-        <div class="product__price">$29.00</div>
+          <a class="product-card__page" href="#">
+            <h3 class="product-card__name">Wooden chair</h3>
+          </a>
+          <div class="product-card__price">$29.00</div>
+        </article>
       </li>
 
       <li class="product__model mix chairs">
-        <div class="product__model-box">
-          <a class="product__links" href="#">
-            <img class="product__img" src="images/products/product7.png" alt="Wooden chair">
-          </a>
-          <div class="product__choice choice">
-            <a class="product__link choice__link" href="#">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#look"></use>
-              </svg>
+        <article class="product-card">
+          <div class="product-card__photo">
+            <a class="product-card__links" href="#">
+              <img class="product-card__img" src="images/products/product7.png" alt="Wooden chair">
             </a>
-            <button class="product__btn choice__btn" type="button">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#garbage"></use>
-              </svg>
-            </button>
-            <button class="product__btn choice__btn" type="button">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#love"></use>
-              </svg>
-            </button>
+            <div class="choice">
+              <a class="choice__link" href="#">
+                <span class="sr-only">go to product page</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#look"></use>
+                </svg>
+              </a>
+
+              <button class="choice__btn" type="button">
+                <span class="sr-only">add to purchase</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#garbage"></use>
+                </svg>
+              </button>
+
+              <button class="choice__btn" type="button">
+                <span class="sr-only">add to spoiled</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#love"></use>
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-        <a class="product__page" href="#">
-          <h3 class="product__name">Wooden chair</h3>
-        </a>
-        <div class="product__price">$29.00</div>
+          <a class="product-card__page" href="#">
+            <h3 class="product-card__name">Wooden chair</h3>
+          </a>
+          <div class="product-card__price">$29.00</div>
+        </article>
       </li>
 
       <li class="product__model mix chairs">
-        <div class="product__model-box">
-          <a class="product__links" href="#">
-            <img class="product__img" src="images/products/product8.png" alt="Retro table">
-          </a>
+        <article class="product-card">
 
-          <div class="product__choice choice">
-            <a class="product__link choice__link" href="#">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#look"></use>
-              </svg>
+          <div class="product-card__photo">
+            <a class="product-card__links" href="#">
+              <img class="product-card__img" src="images/products/product8.png" alt="Retro table">
             </a>
 
-            <button class="product__btn choice__btn" type="button">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#garbage"></use>
-              </svg>
-            </button>
+            <div class="choice">
+              <a class="choice__link" href="#">
+                <span class="sr-only">go to product page</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#look"></use>
+                </svg>
+              </a>
 
-            <button class="product__btn choice__btn" type="button">
-              <svg class="icon">
-                <use xlink:href="images/products/products-sprite.svg#love"></use>
-              </svg>
-            </button>
+              <button class="choice__btn" type="button">
+                <span class="sr-only">add to purchase</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#garbage"></use>
+                </svg>
+              </button>
+
+              <button class="choice__btn" type="button">
+                <span class="sr-only">add to spoiled</span>
+                <svg class="icon">
+                  <use xlink:href="images/products/products-sprite.svg#love"></use>
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-        <a class="product__page" href="#">
-          <h3 class="product__name">Retro table</h3>
-        </a>
-        <div class="product__price">$29.00</div>
+
+          <a class="product-card__page" href="#">
+            <h3 class="product-card__name">Retro table</h3>
+          </a>
+          <div class="product-card__price">$29.00</div>
+        </article>
       </li>
     </ul>
   </div>
@@ -271,7 +327,8 @@
               LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight
             </p>
             <a class="stock__link" href="#">
-                  view more
+              view more
+              <span class="sr-only">go to product page</span>
               <svg class="icon">
                 <use xlink:href="images/slider/sprite.svg#shop-now"></use>
               </svg>
@@ -291,7 +348,8 @@
               50W 8000lm Compact Size for HID Street Light Replacement LED Corn Light
             </p>
             <a class="stock__link" href="#">
-                  view more
+              view more
+              <span class="sr-only">go to product page</span>
               <svg class="icon">
                 <use xlink:href="images/slider/sprite.svg#shop-now"></use>
               </svg>

@@ -11,7 +11,6 @@
     display: flex;
     align-items: center;
     padding: 200px 0;
-    // padding: 200px 0 200px 300px;
   }
 
   &__content {
@@ -76,7 +75,8 @@
     font-size: 15px;
     text-transform: capitalize;
     color: $button-color;
-    transition: color background-color .3s ease;
+    transition-property: background-color, color;
+    transition: all  .5s ease;
     outline: 0;
     &:hover {
       color: $price-color;
@@ -136,6 +136,7 @@
 .slick-dots {
   display: flex;
   justify-content: center;
+
   li:not(:last-child) {
     margin-right: 20px;
   }
@@ -152,11 +153,12 @@
     margin-bottom: 45px;
     @extend %rubik-500;
     font-size: 11px;
+
+    &:hover {
+      background-color: #ffffff;
+    }
   }
 
-  button:hover {
-    background-color: #ffffff;
-  }
 }
 
 .slick-active button {
@@ -171,8 +173,6 @@
   max-width: 100%;
   min-height: 170px;
   background-color: #fef7f0;
-  // display: grid;
-  // grid-template-columns: repeat(3, 1fr);
 
   &__item {
     padding: 20px 130px 0;
