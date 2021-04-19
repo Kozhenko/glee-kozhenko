@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abuot Us - Glee</title>
+  <link rel="shortcut icon" href="/images/glee.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/about.min.css">
+</head>
+
+<body>
+  {% include 'app/components/_header/_header.njk' %}
+  <main class="main">
+  {% include 'app/components/_top/_top.njk' %}
+  {% include 'app/components/_about-mission/_mission.njk' %}
+  {% include 'app/components/_about-team/_team.njk' %}
+
+  {% include 'app/components/_insights/_insights.njk' %}
+  </main>
+  {% include 'app/components/_footer/_footer.njk' %} 
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

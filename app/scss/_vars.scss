@@ -11,7 +11,9 @@ $decor-color: #fde7d3;
 $line-color: #e8e4df;
 $arrow-color: #feefe2;
 $insights-color: #262626;
+$breadcrumbs: #888c91;
 
+//*************************************//
 %dmsans-700{
   font-family: 'DMSans', sans-serif;
   font-weight: 700;
@@ -26,6 +28,11 @@ $insights-color: #262626;
   font-family: 'DMSans', sans-serif;
   font-weight: 400;
 }
+//*************************************//
+%rubik-700{
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+}
 
 %rubik-500{
   font-family: 'Rubik', sans-serif;
@@ -37,6 +44,11 @@ $insights-color: #262626;
   font-weight: 400;
 }
 
+%rubik-300{
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
+//*************************************//
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }

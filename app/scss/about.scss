@@ -1,0 +1,15 @@
+@import 'vars';
+@import 'fonts';
+@import 'mixin';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+@import '../components/_header/header';
+@import '../components/_insights/insights';
+@import '../components/_top/top';
+@import '../components/_about-mission/mission';
+@import '../components/_about-team/team';
+
+
+@import '../components/_footer/footer';

@@ -1,0 +1,57 @@
+.top {
+  background-color: #edf1f4;
+  padding: 35px 0;
+  text-transform: capitalize;
+
+  &__title {
+    @extend %rubik-300;
+    font-size: 36px;
+    line-height: 1;
+    color: #222933;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 1.7;
+    color: $breadcrumbs;
+    padding-right: 20px;
+    position: relative;
+    transition: color .4s ease;
+
+    &:hover {
+      color: $bc-color;
+    }
+
+    &::after {
+      content: '/';
+      position: absolute;
+      right: 6px;
+      color: $breadcrumbs;
+      
+    }
+    &:last-child {
+      padding-right: 0;
+      color: $breadcrumbs;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: inherit;
+  }
+}
