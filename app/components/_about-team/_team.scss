@@ -1,0 +1,172 @@
+.team {
+  padding-bottom: 120px;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__left {
+    max-width: 300px;
+    margin-right: 100px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  p {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 1.9;
+    color: $title-color;
+    margin-bottom: 45px;
+  }
+
+  &__link {
+    padding: 20px 26px 20px 20px;
+    background-color: $price-color;
+    @extend %poppins-600;
+    font-size: 15px;
+    line-height: 3.7;
+    text-transform: capitalize;
+    color: $button-color;
+    border-radius: 4px;
+    transition-property: color, background-color;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $bc-color;
+      background-color: $title-color;
+      svg {
+        fill: $bc-color;
+      }
+    }
+  }
+
+  &__icon {
+    width: 15px;
+    height: 11px;
+    fill: $button-color;
+    margin-left: 19px;
+    transition: fill 0.3s ease;
+  }
+
+  @include _1200 {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__left {
+      margin: 0 0 50px;
+      max-width: 100%;
+    }
+  }
+}
+
+.team-foto {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 370px);
+    grid-gap: 100px 30px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding: 30px 20px 30px 25px;
+    background-color: $button-color;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+    bottom: -60px;
+    left: 0;
+  }
+
+  &__text {
+    margin-right: 50px;
+    max-width: 145px;
+  }
+
+  &__subtitle {
+    @extend %dmsans-700;
+    font-size: 22px;
+    line-height: 1.2;
+    color: $text-color;
+    text-transform: capitalize;
+  }
+
+  &__post {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #565872;
+  }
+
+  &__inner {
+    display: flex;
+  }
+  
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f6f6f6;
+    transition: background-color 0.3s ease;
+
+    &:not(:last-child) {
+      margin-right: 7px;
+    }
+
+    &:hover {
+      background-color: $filter-color;
+      svg {
+        fill: $bc-color;
+      }
+    }
+  }
+
+  &__icon {
+    width: 23px;
+    height: 17px;
+    fill: #8e8e8e;
+    transition: fill 0.3s ease;
+  }
+
+  @include _900 {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include _768 {
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__item {
+      margin: 0 auto;
+    }
+  }
+
+  @include _650 {
+    &__content {
+      padding: 15px 10px 15px 15px;
+    }
+
+    &__text {
+      margin-right: 25px;
+    }
+  }
+}
