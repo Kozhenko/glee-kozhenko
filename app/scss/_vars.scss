@@ -61,3 +61,12 @@ $breadcrumbs: #888c91;
 @function min($numbers...) {
   @return m#{a}x(#{$numbers});
 }
+//**********************************//
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}

@@ -1,4 +1,19 @@
-$ (function () {
+$(function () {
+
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    prefix: "$",
+    postfix: ".00",
+    // step: 0.01,
+    onStart: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+  })
 
   $('.burger-btn, .nav-menu a').on('click', function () {
     $('.nav-menu').toggleClass('nav-menu__active');
@@ -21,9 +36,9 @@ $ (function () {
   if (product__items) {
     // блок существует
     mixitup('.product__items', {
-        selectors: {
-          control: '.product__button'
-        }
+      selectors: {
+        control: '.product__button'
+      }
     });
   }
 
@@ -31,10 +46,10 @@ $ (function () {
   if (design__products) {
     // блок существует
     mixitup('.new-design__products', {
-        selectors: {
-          control: '.new-design__btn'
-        }
-      });
+      selectors: {
+        control: '.new-design__btn'
+      }
+    });
   }
 
   const partner__list = document.querySelector('.partner__list')

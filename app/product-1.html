@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-1 Glee</title>
+    <link rel="shortcut icon" href="/images/glee.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/product1.min.css">
+  </head>
+
+  <body>
+    <header class="header">
+    <div class="container container--top">
+      <nav class="menu">
+        <a class="logo" href="#">
+          <img src="images/header/logo.png" alt="logo company glee" class="logo__img">
+        </a>
+
+        <ul class="nav-menu">
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#">home+</a>
+          </li>
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#">about</a>
+          </li>
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#">services</a>
+          </li>
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#">pages+</a>
+          </li>
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#">news</a>
+          </li>
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#">contact</a>
+          </li>
+        </ul>
+
+        <button class="burger-btn"></button>
+
+        <div class="user-nav">
+          <button class="user-nav__btn user-nav__search" href="#">
+            <svg class="icon">
+              <use xlink:href="images/header/sprite.svg#search"></use>
+            </svg>
+            <span class="sr-only">site search</span>
+          </button>
+          <div class="user-nav__grup">
+            <a class="user-nav__link user-nav__love" href="#">
+              <svg class="icon">
+                <use xlink:href="images/header/sprite.svg#love"></use>
+              </svg>
+              <span class="sr-only">open favorites</span>
+              <span class="user-nav__num">0</span>
+            </a>
+            <a class="user-nav__link user-nav__basket" href="#">
+              <svg class="icon">
+                <use xlink:href="images/header/sprite.svg#basket"></use>
+              </svg>
+              <span class="sr-only">checkout</span>
+              <span class="user-nav__num">0</span>
+            </a>
+          </div>
+          <button class="user-nav__btn user-nav__view" type="button">
+            <svg class="icon">
+              <use xlink:href="images/header/sprite.svg#view"></use>
+            </svg>
+            <span class="sr-only">sorting</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+</header>
+    <main class="main">
+      <section class="top">
+  <div class="container">
+    <h2 class="top__title">Product list 1</h2>
+
+    <div class="breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">
+            home
+          </a>
+        </li>
+
+        <li class="breadcrumbs__item">
+          <a class="breadcrumbs__link" href="#">
+            Product list 1
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+      <section class="shop">
+  <div class="container">
+    <div class="shop__inner">
+      <div class="shop__filters filter">
+
+        <div class="filter-category filter__item">
+          <h3 class="filter-category__title filter__title">category</h3>
+          <form class="filter-category__form" action="#">
+            <label class="filter-category__label">
+              <input class="filter-category__input" type="checkbox">
+              <div class="filter-category__checkbox">
+                <span>chair</span>
+                <span>
+                  <svg class="icon">
+                    <use xlink:href="images/shop/arrow-r.svg#arrow-r"></use>
+                  </svg>
+                </span>
+              </div>
+            </label>
+
+            <label class="filter-category__label">
+              <input class="filter-category__input" type="checkbox">
+              <div class="filter-category__checkbox">
+                <span>table</span>
+                <span>
+                  <svg class="icon">
+                    <use xlink:href="images/shop/arrow-r.svg#arrow-r"></use>
+                  </svg>
+                </span>
+              </div>
+            </label>
+
+            <label class="filter-category__label">
+              <input class="filter-category__input" type="checkbox">
+              <div class="filter-category__checkbox">
+                <span>lamp</span>
+                <span>
+                  <svg class="icon">
+                    <use xlink:href="images/shop/arrow-r.svg#arrow-r"></use>
+                  </svg>
+                </span>
+              </div>
+            </label>
+
+            <label class="filter-category__label">
+              <input class="filter-category__input" type="checkbox">
+              <div class="filter-category__checkbox">
+                <span>watch</span>
+                <span>
+                  <svg class="icon">
+                    <use xlink:href="images/shop/arrow-r.svg#arrow-r"></use>
+                  </svg>
+                </span>
+              </div>
+            </label>
+
+            <label class="filter-category__label">
+              <input class="filter-category__input" type="checkbox">
+              <div class="filter-category__checkbox">
+                <span>clock</span>
+                <span>
+                  <svg class="icon">
+                    <use xlink:href="images/shop/arrow-r.svg#arrow-r"></use>
+                  </svg>
+                </span>
+              </div>
+            </label>
+          </form>
+        </div>
+
+        <div class="filter-price filter__item">
+          <h3 class="filter__title">price</h3>
+          <form class="filter-price__form" action="#">
+            <input class="filter-price__input" type="text" 
+              data-min="0"
+              data-max="1000"
+              data-from="100"
+              data-to="500">
+            <label class="filter-price__label">
+              <span>
+                $<span class="filter-price__from"></span>.00
+              </span>
+              <span>
+                $<span class="filter-price__to"></span>.00
+              </span>
+            </label>
+          </form>
+        </div>
+
+        <div class="filter-brand filter__item">
+          <h3 class="filter__title">brand</h3>
+          <form class="filter-brand__form" action="#">
+            <label class="filter-brand__label">
+              <input class="filter-brand__input" type="checkbox">
+              <div class="filter-brand__checkbox">
+                <span class="filter-brand__name">RFL</span>
+                <span class="filter-brand__quantity">(10)</span>
+              </div>
+            </label>
+
+            <label class="filter-brand__label">
+              <input class="filter-brand__input" type="checkbox">
+              <div class="filter-brand__checkbox">
+                <span class="filter-brand__name">Brothers</span>
+                <span class="filter-brand__quantity">(31)</span>
+              </div>
+            </label>
+
+            <label class="filter-brand__label">
+              <input class="filter-brand__input" type="checkbox">
+              <div class="filter-brand__checkbox">
+                <span class="filter-brand__name">Regal</span>
+                <span class="filter-brand__quantity">(3)</span>
+              </div>
+            </label>
+
+            <label class="filter-brand__label">
+              <input class="filter-brand__input" type="checkbox">
+              <div class="filter-brand__checkbox">
+                <span class="filter-brand__name">Nadia</span>
+                <span class="filter-brand__quantity">(14)</span>
+              </div>
+            </label>
+
+            <label class="filter-brand__label">
+              <input class="filter-brand__input" type="checkbox">
+              <div class="filter-brand__checkbox">
+                <span class="filter-brand__name">Otobi</span>
+                <span class="filter-brand__quantity">(6)</span>
+              </div>
+            </label>
+          </form>
+        </div>
+
+        <div class="filter__item filter-recent">
+          <h3 class="filter__title">recent Product</h3>
+        </div>
+      </div>
+
+      <div class="shop__content"></div>
+    </div>
+  </div>
+</section>
+
+      <section class="insights">
+  <div class="container">
+    <div class="insights__top">
+      <h2 class="insights__title title">our insights & articles</h2>
+      <a class="insights__link" href="#">
+        view all
+        <span class="sr-only">go to product page</span>
+        <svg class="insights__icon">
+          <use xlink:href="images/our-insights/insights-sprite.svg#arrow"></use>
+        </svg>
+      </a>
+    </div>
+
+    <ul class="articles">
+      <li class="articles__item">
+        <a class="article__links" href="#">
+          <img class="articles__img" src="images/our-insights/article-1.jpg" alt="room">
+        </a>
+        <div class="articles__content">
+          <div class="articles__text">
+            <a class="articles__link" href="#">news</a>
+            <a class="articles__page" href="#">
+              <h3 class="articles__name">Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h3>
+            </a>
+          </div>
+
+          <div class="articles__info">
+            <a class="articles__data articles__about" href="#">
+              <span class="sr-only">publication time</span>
+              <svg class="articles__icon">
+                <use xlink:href="images/our-insights/insights-sprite.svg#time"></use>
+              </svg>
+              28 january, 2020
+            </a>
+            <a class="articles__autor articles__about" href="#">
+              <span class="sr-only">autors name</span>
+              <svg class="articles__icon">
+                <use xlink:href="images/our-insights/insights-sprite.svg#autor"></use>
+              </svg>
+              by admin
+            </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="articles__item">
+        <a class="article__links" href="#">
+          <img class="articles__img" src="images/our-insights/article-2.jpg" alt="room">
+        </a>
+        <div class="articles__content">
+          <div class="articles__text">
+            <a class="articles__link" href="#">news</a>
+            <a class="articles__page" href="#">
+              <h3 class="articles__name">Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</h3>
+            </a>
+          </div>
+          <div class="articles__info">
+            <a class="articles__data articles__about" href="#">
+              <span class="sr-only">publication time</span>
+              <svg class="articles__icon">
+                <use xlink:href="images/our-insights/insights-sprite.svg#time"></use>
+              </svg>
+                28 january, 2020
+              </a>
+            <a class="articles__autor articles__about" href="#">
+              <span class="sr-only">autors name</span>
+              <svg class="articles__icon">
+                <use xlink:href="images/our-insights/insights-sprite.svg#autor"></use>
+              </svg>
+                by admin
+              </a>
+          </div>
+        </div>
+      </li>
+
+      <li class="articles__item">
+        <a class="article__links" href="#">
+          <img class="articles__img" src="images/our-insights/article-3.jpg" alt="room">
+        </a>
+        <div class="articles__content">
+          <div class="articles__text">
+            <a class="articles__link" href="#">news</a>
+            <a class="articles__page" href="#">
+              <h3 class="articles__name">Rncididunt ut labore et dolore magna aliqua. Ut enim</h3>
+            </a>
+          </div>
+          <div class="articles__info">
+            <a class="articles__data articles__about" href="#">
+              <span class="sr-only">publication time</span>
+              <svg class="articles__icon">
+                <use xlink:href="images/our-insights/insights-sprite.svg#time"></use>
+              </svg>
+                28 january, 2020
+              </a>
+            <a class="articles__autor articles__about" href="#">
+              <span class="sr-only">autors name</span>
+              <svg class="articles__icon">
+                <use xlink:href="images/our-insights/insights-sprite.svg#autor"></use>
+              </svg>
+                by admin
+              </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="partner">
+  <div class="container">
+    <ul class="partner__list">
+      <li class="partner__item">
+        <span class="sr-only">logo company peternos stephanie</span>
+        <img class="partner__img" src="images/our-insights/our-logo-1.png" alt="logo peternos stephanie">
+      </li>
+
+      <li class="partner__item">
+        <span class="sr-only">logo company consulting</span>
+        <img class="partner__img" src="images/our-insights/our-logo-2.png" alt="logo kmn consulting">
+      </li>
+
+      <li class="partner__item">
+        <span class="sr-only">logo company chainforce</span>
+        <img class="partner__img" src="images/our-insights/our-logo-3.png" alt="logo chainforce">
+      </li>
+
+      <li class="partner__item">
+        <span class="sr-only">logo company nextg3n</span>
+        <img class="partner__img" src="images/our-insights/our-logo-4.png" alt="logo nextg3n">
+      </li>
+
+      <li class="partner__item">
+        <span class="sr-only">logo company vintage</span>
+        <img class="partner__img" src="images/our-insights/our-logo-5.png" alt="logo vintage">
+      </li>
+    </ul>
+  </div>
+</section>
+    </main>
+    <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__inner">
+          <div class="footer__info">
+            <address class="footer__contact">
+              <a class="footer__logo" href="#">
+                <img class="footer__img" src="images/header/logo.png" alt="logo company glee">
+              </a>
+
+              <a class="footer__cont footer__address" href="#">
+                address:<span>4772 Wines Lane Houston, TX 77032</span>
+              </a>
+
+              <a class="footer__cont footer__fone" href="tel:+8323475843" type="tel">
+                Telephone:<span>+832-347-5843</span>
+              </a>
+
+              <a class="footer__cont footer__email" href="mailto:contact@Glee.com" type="email">
+                Email:<span>contact@Glee.com</span>
+              </a>
+            </address>
+          </div>
+
+          <div class="footer__list footer__list--services">
+            <h4 class="footer__subtitle footer__subtitle--services">services</h4>
+            <ul class="footer__wrapper footer__wrapper--services">
+              <li class="footer__item">
+                <a class="footer__link" href="#">about us</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">return police</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">our blog</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">contact us</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">tetms & condition</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__list footer__list--account">
+            <h4 class="footer__subtitle footer__subtitle--account">account</h4>
+            <ul class="footer__wrapper footer__wrapper--account">
+              <li class="footer__item">
+                <a class="footer__link" href="#">your account</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">checkout</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">login</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">register</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__newsletter">
+            <h4 class="footer__subtitle">newsletter</h4>
+            <p>
+              Subscribe by our newsletter and get
+              update protidin.
+            </p>
+            <form action="#" class="footer__form">
+              <label for='email'></label>
+              <input class="footer__input" type="email" placeholder="Email address" required>
+              <label for='button'></label> 
+              <input class="footer__button" type="submit" value="subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>
+          ©2020 CopyRight Example. All rights reserved.
+        </p>
+        <ul class="footer__nav">
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">home</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">about</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">blog</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+    <script src="js/main.min.js"></script>
+  </body>
+
+</html>
